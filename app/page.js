@@ -383,13 +383,13 @@ function GaleriaSection() {
           </div>
         )}
       </div>
-     */
+     
       <Link href="/galeria" style={{ alignSelf: 'center' }}>
         <button style={s.verBtn}>Ver Galeria</button>
       </Link>
     </section>
            
-
+*/
   );
 
 // ── Próximos Eventos ──
