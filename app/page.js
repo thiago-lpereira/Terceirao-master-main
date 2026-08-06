@@ -478,17 +478,18 @@ function CalendarioSection({ events, scheduleEvents, fetchEvents }) {
   };
 
   const handleSubmit = async () => {
-    if (!form.title || !form.eventDate || !creatorName.trim() || !imgFile) {
-      alert("Preencha o título, data, o seu nome e faça o upload de uma imagem.");
+    if (!form.title || !form.eventDate || !creatorName.trim() ) {
+      alert("Preencha o título, data, o seu nome.");
       return;
     }
     setSaving(true);
     try {
-      const fd = new FormData(); 
-      fd.append('file', imgFile);
-      const up = await fetch('/api/upload', { method:'POST', body:fd });
-      const imageUrl = (await up.json()).url;
-
+      let imageUrl = null;
+      if (imgFile) {
+        const fd = new FormData();
+        fd.append('file', imgFile);
+        const up = await fetch('/api/upload', { method:'POST', body:fd }); imageUrl = (await up.json()).url;
+      }
       const cRes = await fetch('/api/creators', { method: 'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ name: creatorName }) });
       const creator = await cRes.json();
 
@@ -603,7 +604,7 @@ function CalendarioSection({ events, scheduleEvents, fetchEvents }) {
                 {EVENT_TYPES.map(t => <option key={t} value={t}>{t}</option>)}
               </select>
               
-              <label style={{fontSize:'0.75rem', color:'var(--text2)', marginBottom:4, display:'block'}}>Thumbnail (Obrigatório) *</label>
+              <label style={{fontSize:'0.75rem', color:'var(--text2)', marginBottom:4, display:'block'}}>Thumbnail (Opcional) *</label>
               <input type="file" accept="image/*" onChange={e=>setImgFile(e.target.files[0])} style={{fontSize:'0.75rem', color:'var(--text)', marginBottom:12}} />
               
               <button onClick={handleSubmit} disabled={saving} style={{padding:'8px', background:'var(--accent2)', color:'#fff', border:'none', borderRadius:6, fontSize:'0.85rem', fontFamily: "'Poppins', sans-serif"}}>
