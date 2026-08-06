@@ -388,10 +388,10 @@ function GaleriaSection() {
         <button style={s.verBtn}>Ver Galeria</button>
       </Link>
     </section>
+           
+     */}
+  );
 
-*/}
-    );
-}
 // ── Próximos Eventos ──
 function EventosSection({ events }) {
   const todayIso = new Date().toISOString().slice(0,10);
