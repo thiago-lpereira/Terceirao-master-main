@@ -170,7 +170,7 @@ const handleAddEvent = async () => {
       <input style={s.inputStyle} placeholder="Subtítulo (opcional)" value={evForm.subtitle} onChange={e => setEvForm(f=>({...f, subtitle:e.target.value}))} />
       <input style={s.inputStyle} type="date" value={evForm.eventDate} onChange={e => setEvForm(f=>({...f, eventDate:e.target.value}))} />
       <select style={s.inputStyle} value={evForm.type} onChange={e => setEvForm(f=>({...f, type:e.target.value}))}>
-        {['Prova','Trabalho','Apresentação','Entrega'].map(t => <option key={t} value={t}>{t}</option>)}
+        {['Prova','Trabalho','Apresentação','Entrega', 'Aniversariante'].map(t => <option key={t} value={t}>{t}</option>)}
       </select>
       <div style={{ display:'flex', gap:8, marginTop:12 }}>
         <button onClick={handleAddEvent} disabled={evSaving}
