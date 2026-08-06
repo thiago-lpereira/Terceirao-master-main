@@ -6,8 +6,7 @@ import Link from 'next/link';
 const MONTHS_PT = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho',
                    'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
 const DAYS_PT   = ['DOM','SEG','TER','QUA','QUI','SEX','SÁB'];
-const EVENT_TYPES = ['Trabalho','Prova','Apresentação','Entrega'];
-
+const EVENT_TYPES = ['Trabalho','Prova','Apresentação','Entrega','Aniversariante'];
 function toISO(d) { return d.toISOString().slice(0,10); }
 
 function useTheme() {
