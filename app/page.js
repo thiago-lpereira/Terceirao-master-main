@@ -347,7 +347,7 @@ function GaleriaSection() {
   return (
     <section style={s.section}>
       <h2 style={s.title}>Galeria</h2>
-  {/*  COMMENTING OUT THE 4 RECTANGLES
+  /*  COMMENTING OUT THE 4 RECTANGLES
       <div style={s.gridWrapper}>
         {row1.length > 0 && (
           <div style={s.row}>
@@ -383,7 +383,7 @@ function GaleriaSection() {
           </div>
         )}
       </div>
-     */}
+     */
       <Link href="/galeria" style={{ alignSelf: 'center' }}>
         <button style={s.verBtn}>Ver Galeria</button>
       </Link>
