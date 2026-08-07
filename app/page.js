@@ -255,7 +255,7 @@ function AvisosBar({ theme }) {
     </div>
   );
 }
-
+  /*  COMMENTING OUT THE 4 RECTANGLES
 // ── Galeria Section ──
 function GaleriaSection() {
   const [cats, setCats] = useState([]);
