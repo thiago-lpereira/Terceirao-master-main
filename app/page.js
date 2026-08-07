@@ -255,7 +255,7 @@ function AvisosBar({ theme }) {
     </div>
   );
 }
-  /*  COMMENTING OUT THE 4 RECTANGLES
+ 
 // ── Galeria Section ──
 function GaleriaSection() {
   const [cats, setCats] = useState([]);
@@ -283,7 +283,7 @@ function GaleriaSection() {
       flexShrink: 0
     },
     gridWrapper: {
-      display: 'flex',
+      display: 'none',
       flexDirection: 'column',
       gap: '1rem',
       width: '95%',
@@ -347,7 +347,7 @@ function GaleriaSection() {
   return (
     <section style={s.section}>
       <h2 style={s.title}>Galeria</h2>
-  /*  COMMENTING OUT THE 4 RECTANGLES
+ 
       <div style={s.gridWrapper}>
         {row1.length > 0 && (
           <div style={s.row}>
@@ -389,8 +389,9 @@ function GaleriaSection() {
       </Link>
     </section>
            
-*/
+
   );
+}
 
 // ── Próximos Eventos ──
 function EventosSection({ events }) {
